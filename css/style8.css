@@ -1,0 +1,484 @@
+
+    
+    /* test de suppression nav et header */
+    /* nav {
+    display: flex;
+    height: 20vw;
+    width: 50%;
+    } */
+    
+    
+    /*
+    Font: ITC AVANT GARDE GOTHIC PRO
+    
+    Uses discretionary ligatures and stylistic sets for the typeface
+    */
+    
+    .bold-AG {
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    .medium-AG {
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    .book-AG {
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    
+    /*
+    Title font, use <b> for bold weight, <i> for book weight, and unadorned <h1> for medium weight.
+    */
+    h1 {
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 6.667vw;
+    line-height: .25vw;
+    font-feature-settings: "ss01" 1, "ss03" 1, "kern" 1, "dlig" 1;
+    z-index: 3;
+    }
+    
+    h2 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.667vw;
+    color: #fff;
+    line-height: .25vw;
+    }
+
+    /* .sizeT {
+      font-size: 90px;
+    } */
+    
+    .neon-text {
+    animation: flicker 6s linear infinite;
+    color:white;
+    }
+    /*
+    BRIEF:
+    
+    This animation transitions between 3 stages at differing speeds to mimic organic flickering in old neon signs.
+    
+    1 is the standard brightness which will be the basis state
+    
+    2 is the overbright state used for sudden flashes
+    
+    3 is the off stage, where only a faint glow inside the text remains.
+    
+    2:
+    color: white;
+    text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+    1:
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    3:
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    
+    the stages of animation were figured out manually by studying stock footage of a neon sign flickering.
+    */
+    
+    @keyframes flicker {
+    0% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    } 3.3% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    } 3.67% {
+    /*2*/
+    color: white;
+    text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+    } 10% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 36.7% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 37.3% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    } 38% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 40.67% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    } 41.33% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 60% {
+    /*2*/
+    color: white;
+    text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+    } 80% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 93.3% {
+    /*2*/
+    color: white;
+    text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+    } 93.5% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    } 98% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+    } 100% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+    0 0 1vw #FF5200,
+    0 0 2vw #FF5200,
+    0 0 2.5vw #FF5200,
+    0 0 3vw #FF5200,
+    0 0 4vw #FF5200;
+    }
+    }
+    
+    /*bold weight*/
+    b {
+    font-weight: 700px;
+    }
+    /*book weight NON ITALIC*/
+    i {
+    font-style: normal;
+    font-weight: 100px;
+    }
+    
+    
+       
+/* Styles pour ordinateur */
+    @media only screen and (max-width: 768px){ 
+      html,
+  body {
+    
+    /* for touch screen */
+    touch-action:auto;
+    overflow-x: scroll;
+  }
+  b {
+        font-weight: 700;
+        }
+  .sizeT {
+          font-size: 40px;
+      }
+      
+    
+  .toggle-btn{
+    margin-top: 0px;
+    
+  }
+  
+  .toggle-btn span{
+    /* width: 50px;
+    height: 30px; */
+  }
+
+  li{
+    
+    font-size: 3.5rem;
+    
+  }
+
+  .neon-text {
+    color:white;
+    }
+
+  #drag-container img, #drag-container video {
+    
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 20%;
+    
+  }
+
+  #accueilneon  {
+    /* margin:  100px auto; */
+    margin-top: 500px;
+    
+  }
+
+  
+}
+
+
+
+/* Styles pour portable */
+
+@media only screen and (min-width: 900px) {
+  .sizeT {
+    font-size: 30px;
+    
+}
+
+.neon-text {
+  color:white;
+  }
+
+  #accueilneon  {
+    /* margin:  100px auto; */
+    margin-top: 200px;
+    
+  }
+  /* réaction */
+
+  .color-school {
+
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  .color-biog {
+
+    
+    background-attachment: fixed;
+    background-position: center; 
+    
+    /* min-height: 100vh;
+    background: linear-gradient(to right, #119979, #e938ef);  */
+    /* padding: clamp(20px, 12vw, 120px) 10px 10px; */
+  } 
+
+  .color-mariage {
+
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  .color-disco1 {
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  .color-disco3 {
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  .color-disco3a {
+    background-attachment: fixed;
+    background-position: center; 
+    
+    
+    /* min-height: 100vh;
+    background: linear-gradient(to right, #491207, #010045);  */
+    /* padding: clamp(20px, 12vw, 120px) 10px 10px; */
+  } 
+  
+  #taille {
+    /* background-color: yellow; */
+    height: 10%;
+  }
+  
+
+}
+@media screen and (min-width: 319px){
+  #taille {
+    /* background-color: yellow; */
+    height: 10%;
+  }
+  .color-disco3a {
+    background-attachment: fixed;
+    background-position: center; 
+    
+    /* min-height: 100vh;
+    background: linear-gradient(to right, #491207, #010045);  */
+    /* padding: clamp(20px, 12vw, 120px) 10px 10px; */
+  } 
+  html,
+body {
+
+/* for touch screen */
+touch-action:auto;
+overflow-x: scroll;
+}
+    .sizeT {
+    font-size: 60px;
+}
+
+
+
+
+header {
+  margin-top: 200px;
+
+}
+.toggle-btn{
+  /* width: 50px;
+  height: 30px; */
+
+  margin-top: 0px;
+  
+}
+
+/* taille menu */
+
+li{
+  
+  font-size: 3.5rem;
+  
+}
+
+.neon-text {
+  color:white;
+}
+
+
+
+
+
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/* @media screen and (max-device-width: 375px) and (orientation:portrait) {
+
+  .body{
+    background-color:#ffffff;
+
+
+   }
+   .video {
+    
+    width: 250px; 
+   
+
+  }
+   
+}  */
+/* @media print {
+  body {
+      font-size: 12pt;
+  }
+
+  .video {
+    width: 250px; 
+
+  }
+} */
+
+
+/* solution scroll iPhone */
+
+/* @media screen and (max-width: 768px){ 
+  b {
+    font-weight: 700;
+    }
+} */
+
+
+
