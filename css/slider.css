@@ -7,8 +7,11 @@
 }
 
 .scroller {
+  background: radial-gradient(ellipse at top, #f6f6f614, transparent),
+            radial-gradient(ellipse at bottom, #902ff7a5, transparent);
   width: 300px;
   height: 200px;
+  border-radius: 5%;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
